@@ -1,8 +1,8 @@
 'use strict';
 
-const glob     = require('glob'),
-	  critical = require('critical'),
-	  config   = require('./package.json').config;
+const glob     = require('glob');
+const critical = require('critical');
+const config   = require('./package.json').config;
 
 function generateCriticalPath(err, files) {
 	if (err) throw err;
@@ -22,4 +22,4 @@ function generateCriticalPath(err, files) {
 	});
 }
 
-glob(config.dist + '**/*.html', generateCriticalPath);
+glob(`${config.dist}**/*.html`, generateCriticalPath);

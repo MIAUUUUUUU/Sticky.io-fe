@@ -1,6 +1,6 @@
-const webpack = require('webpack'),
-      path    = require('path'),
-      conf    = require('./package.json').config;
+const webpack = require('webpack');
+const path    = require('path');
+const conf    = require('./package.json').config;
 
 module.exports = {
 	entry: {
@@ -12,17 +12,13 @@ module.exports = {
 		publicPath: path.resolve(conf.dist),
 		path: path.resolve(conf.scripts.dist)
 	},
-	eslint: {
-		configFile: "./.eslintrc",
-		failOnError: true
-	},
 	devtool: 'inline-source-map',
 	debug: true,
 	module: {
 		loaders: [
 			{
 				test: /\.js$/,
-				loaders: ['babel?presets[]=es2015', 'eslint'],
+				loaders: ['babel?presets[]=es2015'],
 				exclude: /node_modules/
 			}
 		]

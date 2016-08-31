@@ -8,7 +8,7 @@
     	"expect": "always",
     	"error": true
     },
-    "colors": "always",
+    "colors": false,
     "commaSpace": "always",
     "commentSpace": "always",
     "cssLiteral": "never",
