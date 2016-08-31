@@ -1,0 +1,31 @@
+#main-menu {
+    border-top: 1px solid darken(light-color, 15);
+    lost-utility: clearfix;
+    margin-top: double-space;
+    padding: double-space 0;
+    text-align: center;
+    
+    > .item {
+        lost-column: 1/6;
+        padding: 0 double-space;
+        position: relative;
+        
+        &:after {
+            background-color: darken(light-color, 45);
+            bottom: -10px;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 50%;
+            position: relative;
+            transition: all .3s ease;
+            width: 0;
+        }
+        
+        &:hover::after,
+        &.-active::after {
+            width: 100%;
+            left: 0;
+        }
+    }
+}
