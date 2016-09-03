@@ -1,6 +1,10 @@
-import myModule from './modules/my-module.js';
-import $ from 'jquery';
+import Flickity from 'flickity';
 
-myModule();
+(function(){
+    instantiateFlickities();
+})();
 
-console.log($.fn);
+function instantiateFlickities () {
+    const mainCarrousel = new Flickity('[data-id="main-carrousel"]', {pageDots: false});    
+}
+
