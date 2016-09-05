@@ -8,18 +8,18 @@ function generateCriticalPath(err, files) {
 	if (err) throw err;
 
 	files.forEach((file, index) => {
-		const page = file.split(config.dist).pop();
+		const page = file.split('./').pop();
 
 		critical.generate({
 			inline: true,
 			minify: true,
-			base: config.dist,
+			base: './',
 			src: page,
-			dest: config.dist + page,
+			dest: './critical-' + page ,
 			width: 1300,
 			height: 900
 		});
 	});
 }
 
-glob(`${config.dist}**/*.html`, generateCriticalPath);
+glob(`./*.html`, generateCriticalPath);

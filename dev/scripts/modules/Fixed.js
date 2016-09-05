@@ -22,6 +22,8 @@ class Fixed {
         if(wintop >= this.eltop) {
             let position = wintop - this.eltop;
             this.setPosition(position);
+        } else {
+            this.setPosition(0);
         }
     }
     
