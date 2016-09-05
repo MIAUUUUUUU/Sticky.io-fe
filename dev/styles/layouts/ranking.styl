@@ -1,10 +1,19 @@
 #ranking { 
-    width: 50%;
-    float: left;
+    float: right;
     padding: double-space double-space*2;
+    width: 40%;
     
     
     > .title {
-        font-size: responsive;
+        font-size: 32px;
+        margin-top: 0;
+    }
+    
+    .ranking-list > .item {
+        margin-left: 2*(double-space);
+    }
+    
+    &.-fixed {
+        position: fixed;
     }
 }
