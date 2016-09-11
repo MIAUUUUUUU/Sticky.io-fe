@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link rel="stylesheet" href="dist/assets/css/main.css" type="text/css" />
+        <title>Sticky.io | Sign in</title>
+    </head>
+    <body>
+        <header id="main-header">
+            <div class="wrapper">
+                <div class="main-logo">
+                    <img src="http://fakeimg.pl/100x50/" title="Sticky.io" alt="Sticky.io - Logo">
+                </div>
+                <div class="login">
+                    <button class="btn">Login</button>
+                </div>
+            </div>
+            <nav id="main-menu" role="navigation">
+                <a class="item" href="/project/index.html">Home</a>
+                <a class="item -active" href="/project/signin.html">Sign in</a>
+                <a class="item" href="#">Contact</a>
+                <a class="item" href="#">Networks</a>
+                <a class="item" href="#">Founders</a>
+            </nav>
+        </header>
+        <main role="main" class="container">
+            <section id="form-cadastro">
+                <h1 class="title">Sign in</h1>
+                <form>
+                    <fieldset class="form-group">
+                        <div class="flipswitch">
+                            <span class="caption">Client</span>
+                            <div class="onoff">
+                                <input type="checkbox" name="onoff" id="flipswitch"/>
+                                <label class="button" for="flipswitch">
+                                </label>
+                            </div>
+                            <span class="caption">Investor</span>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label class="label">Name</label>
+                        <input class="input" type="text" required placeholder="John Sccot"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label class="label">Email</label>
+                        <input class="input" type="text" required placeholder="johnsccot@fiap.com.br"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label class="label">Tax ID</label>
+                        <input class="input" type="text" required placeholder="158.540.157-8"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label class="label">Telephone</label>
+                        <input class="input" type="tel" required placeholder="+55 (11) 9985-4400"/>
+                    </fieldset>
+                    <fieldset class="form-group" data-id="client">
+                        <label class="label">Mobile</label>
+                        <input class="input" type="tel" required placeholder="+55 (11) 9985-4400"/>
+                    </fieldset>
+                    <fieldset class="form-group" data-id="">
+                        <label class="label">Rate</label>
+                        <input class="input" type="number" max="5" min="1" maxlength="1" required placeholder="5"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <button class="btn" type="button">Submit</button>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+        <script type="text/javascript" src="dist/assets/js/bundle.vendor.js" async="true"></script>
+        <script type="text/javascript" src="dist/assets/js/bundle.contato.js" async="true"></script>
+    </body>
+</html>

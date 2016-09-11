@@ -67,7 +67,7 @@
     "watch:styles": "concurrently -kr 'npm run build:styles -- -w' 'npm run lint:styles -- -w'",
     "watch:all": "concurrently -kr 'npm run watch:scripts' 'npm run watch:styles'",
     "build:scripts": "webpack",
-    "build:styles": "stylus -u poststylus --with '[require(\"rucksack-css\")(), require(\"lost\")]' -u rupture --sourcemap-inline $npm_package_config_styles_dev -o $npm_package_config_styles_dist",
+    "build:styles": "stylus -u poststylus --with '[require(\"rucksack-css\")(), require(\"lost\")]' -u rupture --sourcemap $npm_package_config_styles_dev -o $npm_package_config_styles_dist",
     "lint:styles": "stylint ${npm_package_config_styles_dev}**/ -c ./.stylintrc",
     "optimize:images": "node ./imagemin.js",
     "critical:path": "node ./critical-path.js",

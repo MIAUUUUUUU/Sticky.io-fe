@@ -1,0 +1,40 @@
+.flipswitch {
+    
+    > .onoff,
+    > .caption {
+        display: inline-block;
+        vertical-align: middle;
+        width: 75px;
+        text-align: center;
+    }
+    
+    > .onoff {
+        width: 40px;
+        height: 20px;
+        position: relative;
+        border: 1px solid darken(light-color, 5);
+        border-radius: 35px;
+        background-color: themes.primary;
+    }
+    
+    > .onoff > .button {
+        display: block;
+        height: 89%;
+        width: 55%;
+        background-color: darken(light-color, 5);
+        border-radius: 35px;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: 1px;
+        transition: all 0.1s ease;
+    }
+    > .onoff > #flipswitch {
+        display: none;
+    }
+    > .onoff > #flipswitch:checked + .button {
+        transition: all 0.1s ease;
+        left: 100%;
+        transform: translate(-102%, -50%);
+    }
+}

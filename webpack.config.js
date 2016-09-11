@@ -5,14 +5,15 @@ const conf    = require('./package.json').config;
 module.exports = {
 	entry: {
 		vendor: ['jquery'],
-		main: path.resolve(conf.scripts.dev+'main.js')
+		main: path.resolve(conf.scripts.dev+'main.js'),
+		contato: path.resolve(conf.scripts.dev+'contato.js')
 	},
 	output: {
 		filename: 'bundle.[name].js',
 		publicPath: path.resolve(conf.dist),
 		path: path.resolve(conf.scripts.dist)
 	},
-	devtool: 'inline-source-map',
+	devtool: 'source-map',
 	debug: true,
 	module: {
 		loaders: [
