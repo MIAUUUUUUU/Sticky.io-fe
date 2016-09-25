@@ -1,17 +1,13 @@
 import Flickity from 'flickity';
 import Fixed from './modules/Fixed.js';
-
-instantiateFlickities();
-instantiateRanking();
+import Posts from './modules/Posts.js'; 
 
 
-function instantiateFlickities () {
+
+Posts("/project/mock/news.json", (data) => {
     const mainCarrousel = new Flickity('[data-id="main-carrousel"]', {pageDots: false,wrapAround: true});    
-}
+});
 
-function instantiateRanking() {
-    const rank = new Fixed('#ranking');
-    rank.init();
-}
+const rank = new Fixed('#ranking');
 
 

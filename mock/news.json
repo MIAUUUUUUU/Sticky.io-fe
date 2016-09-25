@@ -1,0 +1,77 @@
+[
+    {
+        "id":1,
+        "title":"Mateusdasdasd",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod",
+        "isActive":true,
+        "bannerImage":"http://fakeimg.pl/1024x480/",
+        "writeDate":"0001-01-01T00:00:00",
+        "lastRevisionDate":"2016-09-21T01:43:24.1179451",
+        "productId":1,
+        "product": {
+            "id":1,
+            "name":"Produto de Teste",
+            "type":"Teste"
+        }
+    },
+    {
+        "id":2,
+        "title":"Mateusdasdasd",
+        "content":"tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "isActive":true,
+        "bannerImage":"http://fakeimg.pl/1024x480/",
+        "writeDate":"0001-01-01T00:00:00",
+        "lastRevisionDate":"2016-09-21T01:43:24.1179451",
+        "productId":1,
+        "product": {
+            "id":1,
+            "name":"Produto de Teste",
+            "type":"Teste"
+        }
+    },
+    {
+        "id":3,
+        "title":"Mateusdasdasd",
+        "content":"quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
+        "isActive":true,
+        "bannerImage":"http://fakeimg.pl/1024x480/",
+        "writeDate":"0001-01-01T00:00:00",
+        "lastRevisionDate":"2016-09-21T01:43:24.1179451",
+        "productId":1,
+        "product": {
+            "id":1,
+            "name":"Produto de Teste",
+            "type":"Teste"
+        }
+    },
+    {
+        "id":4,
+        "title":"Mateusdasdasd",
+        "content":"consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse",
+        "isActive":true,
+        "bannerImage":"http://fakeimg.pl/1024x480/",
+        "writeDate":"0001-01-01T00:00:00",
+        "lastRevisionDate":"2016-09-21T01:43:24.1179451",
+        "productId":1,
+        "product": {
+            "id":1,
+            "name":"Produto de Teste",
+            "type":"Teste"
+        }
+    },
+    {
+        "id":5,
+        "title":"Mateusdasdasd",
+        "content":"cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non",
+        "isActive":true,
+        "bannerImage":"http://fakeimg.pl/1024x480/",
+        "writeDate":"0001-01-01T00:00:00",
+        "lastRevisionDate":"2016-09-21T01:43:24.1179451",
+        "productId":1,
+        "product": {
+            "id":1,
+            "name":"Produto de Teste",
+            "type":"Teste"
+        }
+    }
+]
