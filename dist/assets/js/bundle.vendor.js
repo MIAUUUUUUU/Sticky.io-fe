@@ -40,17 +40,15 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(20);
+	module.exports = __webpack_require__(1);
 
 
 /***/ },
-
-/***/ 20:
+/* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*eslint-disable no-unused-vars*/
@@ -10130,6 +10128,5 @@
 
 
 /***/ }
-
-/******/ });
+/******/ ]);
 //# sourceMappingURL=bundle.vendor.js.map

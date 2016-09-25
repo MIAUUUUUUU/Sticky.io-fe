@@ -27,12 +27,12 @@
         <main role="main" class="container">
             <section id="form-cadastro">
                 <h1 class="title">Sign in</h1>
-                <form>
+                <form id="form-client">
                     <fieldset class="form-group">
                         <div class="flipswitch">
                             <span class="caption">Client</span>
                             <div class="onoff">
-                                <input type="checkbox" name="onoff" id="flipswitch"/>
+                                <input type="checkbox" id="flipswitch"/>
                                 <label class="button" for="flipswitch">
                                 </label>
                             </div>
@@ -41,30 +41,30 @@
                     </fieldset>
                     <fieldset class="form-group">
                         <label class="label">Name</label>
-                        <input class="input" type="text" required placeholder="John Sccot"/>
+                        <input class="input" type="text" name="Name" required placeholder="John Sccot"/>
                     </fieldset>
                     <fieldset class="form-group">
                         <label class="label">Email</label>
-                        <input class="input" type="text" required placeholder="johnsccot@fiap.com.br"/>
+                        <input class="input" type="text" name="Email" required placeholder="johnsccot@fiap.com.br"/>
                     </fieldset>
                     <fieldset class="form-group">
                         <label class="label">Tax ID</label>
-                        <input class="input" type="text" required placeholder="158.540.157-8"/>
+                        <input class="input" type="text" name="TaxId" required placeholder="158.540.157-8"/>
                     </fieldset>
                     <fieldset class="form-group">
                         <label class="label">Telephone</label>
-                        <input class="input" type="tel" required placeholder="+55 (11) 9985-4400"/>
-                    </fieldset>
-                    <fieldset class="form-group" data-id="client">
-                        <label class="label">Mobile</label>
-                        <input class="input" type="tel" required placeholder="+55 (11) 9985-4400"/>
-                    </fieldset>
-                    <fieldset class="form-group" data-id="">
-                        <label class="label">Rate</label>
-                        <input class="input" type="number" max="5" min="1" maxlength="1" required placeholder="5"/>
+                        <input class="input" type="tel" name="Telephone"  required placeholder="+55 (11) 9985-4400"/>
                     </fieldset>
                     <fieldset class="form-group">
-                        <button class="btn" type="button">Submit</button>
+                        <label class="label">Mobile</label>
+                        <input class="input" type="tel" name="MobilePhone"  required placeholder="+55 (11) 9985-4400"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label class="label">Rate</label>
+                        <input class="input" type="number" name="Rate"  max="5" min="1" maxlength="1" required placeholder="5"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <button class="btn" type="submit">Submit</button>
                     </fieldset>
                 </form>
             </section>
