@@ -19,9 +19,9 @@ function getSerializedObject($inputs) {
 
 function getUrl($checkbox) {
     if($checkbox.is(':checked')) {
-        return "http://miaucore.azurewebsites.net/api/Investor/Post";
+        return "http://miaucore.azurewebsites.net/api/Investor";
     } else {
-        return "http://miaucore.azurewebsites.net/api/Client/Post";
+        return "http://miaucore.azurewebsites.net/api/Client";
     }
 }
 
@@ -36,12 +36,19 @@ function bindEvents() {
 }
 
 function sendPost(url, data, $form) {
-    $.post(url, data).done(() => {
-        $form[0].reset();
-        alert('Sign in with success!');
-        window.location = "/project";
-    }).fail(() => {
-        alert('Failed to sign in, try again later');
+    $.ajax({
+        url: url,
+        method: "POST",
+        contentType: "application/json",
+        data: JSON.stringify(data),
+        success: (val) => {
+            $form[0].reset();
+            alert('Sign in with success!');
+            window.location = "/project";    
+        },
+        error: (val) => {
+            alert("Falied to sign in, try again later")
+        }
     });
 }
 
