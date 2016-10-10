@@ -10,9 +10,11 @@ function getSerializedObject($inputs) {
     let data = {};
     $inputs.each((i, input) => {
         let $input = $(input);
-        let key = $input.attr('name');
-        let val  = $input.val();
-        data[key] = val;
+        if($input.is(':visible')) {
+            let key = $input.attr('name');
+            let val  = $input.val();
+            data[key] = val;
+        }
     });
     return data;
 }
@@ -32,6 +34,20 @@ function bindEvents() {
         let data = getSerializedObject(inputs);
         let url = getUrl($form.find('#flipswitch'));
         sendPost(url, data, $form);
+    });
+    
+    $('#flipswitch').on('change', ev => {
+        if($('#flipswitch').is(':checked')) {
+            $('[data-investor]').show();
+            $('[data-client]').hide();
+            $('[data-investor]').removeAttr('disabled')
+            $('[data-client]').attr('disabled', 'true');
+        } else {
+            $('[data-client]').show();
+            $('[data-investor]').hide();
+            $('[data-client]').removeAttr('disabled')
+            $('[data-investor]').attr('disabled', 'true');
+        }
     });
 }
 
@@ -59,3 +75,12 @@ export default function init() {
 
 // [17:37:55] Mateus Hortencio: http://miaucore.azurewebsites.net/api/Client/Post
 // [17:38:08] Mateus Hortencio: http://miaucore.azurewebsites.net/api/Investor/Post
+
+/*[19:23, 9/10/2016] Matheus Avatar: investors'
+        public string Company { get; set; }
+        public string Telephone { get; set; }
+        public string Email { get; set; }
+        public string Address { get; set; }
+        public string NERC { get; set; }
+        public string Message { get; set; }
+        */

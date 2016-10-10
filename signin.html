@@ -39,7 +39,7 @@
                             <span class="caption">Investor</span>
                         </div>
                     </fieldset>
-                    <fieldset class="form-group">
+                    <fieldset class="form-group" data-client>
                         <label class="label">Name</label>
                         <input class="input" type="text" name="Name" required placeholder="John Sccot"/>
                     </fieldset>
@@ -47,7 +47,7 @@
                         <label class="label">Email</label>
                         <input class="input" type="text" name="Email" required placeholder="johnsccot@fiap.com.br"/>
                     </fieldset>
-                    <fieldset class="form-group">
+                    <fieldset class="form-group" data-client>
                         <label class="label">Tax ID</label>
                         <input class="input" type="text" name="TaxId" required placeholder="158.540.157-8"/>
                     </fieldset>
@@ -55,13 +55,29 @@
                         <label class="label">Telephone</label>
                         <input class="input" type="tel" name="Telephone"  required placeholder="+55 (11) 9985-4400"/>
                     </fieldset>
-                    <fieldset class="form-group">
+                    <fieldset class="form-group" data-client>
                         <label class="label">Mobile</label>
                         <input class="input" type="tel" name="MobilePhone"  required placeholder="+55 (11) 9985-4400"/>
                     </fieldset>
-                    <fieldset class="form-group">
+                    <fieldset class="form-group" data-client>
                         <label class="label">Rate</label>
                         <input class="input" type="number" name="Rate"  max="5" min="1" maxlength="1" required placeholder="5"/>
+                    </fieldset>
+                    <fieldset class="form-group" data-investor style="display:none;"  disabled="true">
+                        <label class="label">Company</label>
+                        <input class="input" type="text" name="Company" required placeholder="FIAP" />
+                    </fieldset>
+                    <fieldset class="form-group" data-investor style="display:none;" disabled="true" >
+                        <label class="label">Address</label>
+                        <input class="input" type="text" name="Address" required placeholder="Street 8 Mile" />
+                    </fieldset>
+                    <fieldset class="form-group" data-investor  style="display:none;"  disabled="true">
+                        <label class="label">NERC</label>
+                        <input class="input" type="text" name="NERC" required placeholder="NERC"/>
+                    </fieldset>
+                    <fieldset class="form-group" data-investor  style="display:none;" disabled="true">
+                        <label class="label">Message</label>
+                        <input class="input" type="text" name="Message" required placeholder="Message"/>
                     </fieldset>
                     <fieldset class="form-group">
                         <button class="btn" type="submit">Submit</button>
