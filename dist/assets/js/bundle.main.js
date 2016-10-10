@@ -14223,7 +14223,7 @@
 	var $newsTamplate = ' <article class="new">\n                            <div class="banner">\n                                <img src="{{bannerImage}}"></img>\n                            </div>\n                            <h1 class="title">{{title}}</h1>\n                            <p class="content">\n                                {{content}}\n                            </p>\n                            <div class="actions">\n                                <a href="/project/readmore.html?id={{id}}" class="btn -compact readmore">Read more.</a>\n                            </div>\n                        </article>';
 	
 	var $featuredNewsWrapper = (0, _jquery2.default)('[data-id="main-carrousel"]');
-	var $featuredNewsTemplate = ' <figure class="new">\n                                    <img src="{{bannerImage}}">\n                                    <figcaption>{{content}}</figcaption>\n                                </figure>';
+	var $featuredNewsTemplate = ' <figure class="new">\n                                    <img src="{{bannerImage}}">\n                                    <figcaption>{{content}}<a href="/project/readmore.html?id={{id}}"> Read more.</a></figcaption>\n                                    \n                                </figure>';
 	
 	function render($wrapper, $template, data) {
 	    var $news = data.map(function (val) {
