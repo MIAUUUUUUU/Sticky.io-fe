@@ -18,6 +18,7 @@ const $featuredNewsWrapper = $('[data-id="main-carrousel"]');
 const $featuredNewsTemplate = ` <figure class="new">
                                     <img src="{{bannerImage}}">
                                     <figcaption>{{content}}</figcaption>
+                                    <a href="/project/readmore.html?id={{id}}" class="btn -compact readmore">Read more.</a>
                                 </figure>`;
 
 function render($wrapper, $template, data) {
