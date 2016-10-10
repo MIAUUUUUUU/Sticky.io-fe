@@ -10,7 +10,7 @@ const $newsTamplate = ` <article class="new">
                                 {{content}}
                             </p>
                             <div class="actions">
-                                <a href="/new?id={{id}}" class="btn -compact readmore">Read more.</a>
+                                <a href="/project/readmore.html?id={{id}}" class="btn -compact readmore">Read more.</a>
                             </div>
                         </article>`;
 
