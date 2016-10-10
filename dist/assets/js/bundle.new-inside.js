@@ -44,19 +44,47 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	var _jquery = __webpack_require__(1);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _FormClient = __webpack_require__(2);
-	
-	var _FormClient2 = _interopRequireDefault(_FormClient);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	(0, _FormClient2.default)();
+	function fetchData(url, fn) {
+	    _jquery2.default.get(url).then(function (data) {
+	        if (typeof data === "string") {
+	            data = JSON.parse(data);
+	        }
+	        fn(data);
+	    });
+	}
+	
+	function render(data) {
+	    var $title = (0, _jquery2.default)('[data-id="title"]');
+	    var $image = (0, _jquery2.default)('[data-id="image"]');
+	    var $content = (0, _jquery2.default)('[data-id="content"]');
+	
+	    $title.text(data.title);
+	    $image.attr('src', data.bannerImage);
+	    $content.text(data.content);
+	}
+	
+	function getParameterByName(name, url) {
+	    if (!url) url = window.location.href;
+	    name = name.replace(/[\[\]]/g, "\\$&");
+	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+	        results = regex.exec(url);
+	    if (!results) return null;
+	    if (!results[2]) return '';
+	    return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
+	
+	var defaultUrl = 'http://miaucore.azurewebsites.net/api/News/';
+	var id = getParameterByName('id');
+	
+	fetchData(defaultUrl + id, render);
 
 /***/ },
 /* 1 */
@@ -10138,107 +10166,6 @@
 	} );
 
 
-/***/ },
-/* 2 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.default = init;
-	
-	var _jquery = __webpack_require__(1);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var $form = (0, _jquery2.default)('#form-client');
-	
-	function getInputs($form) {
-	    return $form.find("[name]");
-	}
-	
-	function getSerializedObject($inputs) {
-	    var data = {};
-	    $inputs.each(function (i, input) {
-	        var $input = (0, _jquery2.default)(input);
-	        if ($input.is(':visible')) {
-	            var key = $input.attr('name');
-	            var val = $input.val();
-	            data[key] = val;
-	        }
-	    });
-	    return data;
-	}
-	
-	function getUrl($checkbox) {
-	    if ($checkbox.is(':checked')) {
-	        return "http://miaucore.azurewebsites.net/api/Investor";
-	    } else {
-	        return "http://miaucore.azurewebsites.net/api/Client";
-	    }
-	}
-	
-	function bindEvents() {
-	    $form.on('submit', function (ev) {
-	        ev.preventDefault();
-	        var inputs = getInputs($form);
-	        var data = getSerializedObject(inputs);
-	        var url = getUrl($form.find('#flipswitch'));
-	        sendPost(url, data, $form);
-	    });
-	
-	    (0, _jquery2.default)('#flipswitch').on('change', function (ev) {
-	        if ((0, _jquery2.default)('#flipswitch').is(':checked')) {
-	            (0, _jquery2.default)('[data-investor]').show();
-	            (0, _jquery2.default)('[data-client]').hide();
-	            (0, _jquery2.default)('[data-investor]').removeAttr('disabled');
-	            (0, _jquery2.default)('[data-client]').attr('disabled', 'true');
-	        } else {
-	            (0, _jquery2.default)('[data-client]').show();
-	            (0, _jquery2.default)('[data-investor]').hide();
-	            (0, _jquery2.default)('[data-client]').removeAttr('disabled');
-	            (0, _jquery2.default)('[data-investor]').attr('disabled', 'true');
-	        }
-	    });
-	}
-	
-	function sendPost(url, data, $form) {
-	    _jquery2.default.ajax({
-	        url: url,
-	        method: "POST",
-	        contentType: "application/json",
-	        data: JSON.stringify(data),
-	        success: function success(val) {
-	            $form[0].reset();
-	            alert('Sign in with success!');
-	            window.location = "/project";
-	        },
-	        error: function error(val) {
-	            alert("Falied to sign in, try again later");
-	        }
-	    });
-	}
-	
-	function init() {
-	    bindEvents();
-	}
-	
-	// [17:37:55] Mateus Hortencio: http://miaucore.azurewebsites.net/api/Client/Post
-	// [17:38:08] Mateus Hortencio: http://miaucore.azurewebsites.net/api/Investor/Post
-	
-	/*[19:23, 9/10/2016] Matheus Avatar: investors'
-	        public string Company { get; set; }
-	        public string Telephone { get; set; }
-	        public string Email { get; set; }
-	        public string Address { get; set; }
-	        public string NERC { get; set; }
-	        public string Message { get; set; }
-	        */
-
 /***/ }
 /******/ ]);
-//# sourceMappingURL=bundle.contato.js.map
+//# sourceMappingURL=bundle.new-inside.js.map

@@ -6,7 +6,8 @@ module.exports = {
 	entry: {
 		vendor: ['jquery'],
 		main: path.resolve(conf.scripts.dev+'main.js'),
-		contato: path.resolve(conf.scripts.dev+'contato.js')
+		contato: path.resolve(conf.scripts.dev+'contato.js'),
+		'new-inside': path.resolve(conf.scripts.dev+'new-inside.js')
 	},
 	output: {
 		filename: 'bundle.[name].js',
